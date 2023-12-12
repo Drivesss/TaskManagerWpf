@@ -15,7 +15,19 @@
         public List<Desk> Desks { get; set; } = new List<Desk>();
         public List<Task> Tasks { get; set; } = new List<Task>();
         public UserStatus Status { get; set; }
-
+        public User() { }
+        public User(string fname, string lname, string email, string password,
+            UserStatus status = UserStatus.User, string phone = null, byte[] photo = null)
+        {
+            FirstName = fname;
+            LastName = lname;
+            Email = email;
+            Password = password;
+            Phone = phone;
+            Photo = photo;
+            RegistrationOnDate = DateTime.Now;
+            Status = status;
+        } 
     }
 }
-    
+      
